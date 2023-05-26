@@ -12,9 +12,14 @@ function calcular(tipo, valor) {
       document.getElementById('resultado').value = valor_campo + valor;
     }
 
+    if (valor === '=') {
+     var valor_campo =  eval(document.getElementById('resultado').value);
+     
+     document.getElementById('resultado').value = valor_campo;
+    }
+
   } else if (tipo === 'valor') {
     var valor_campo = document.getElementById('resultado').value
     document.getElementById('resultado').value = valor_campo + valor;
   }
-
 }
